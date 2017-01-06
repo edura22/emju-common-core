@@ -1,0 +1,309 @@
+
+# the 4-digit application code
+severity.fatal = F
+severity.error = E
+
+#####################
+# Fault Codes
+#####################
+
+# System Errors 1000 - 1050
+   
+ 
+service.authorization.failure.errcode = {0}1000{1}
+service.authorization.failure.errmsg = Unauthorized Access. Please ensure you have the right privileges to access the Service.
+
+service.system.failure.errcode = {0}1001{1}
+service.system.failure.errmsg = Unable to process request. Please contact Safeway support with error code  
+
+unexpected.system.failure.errcode = {0}1002{1}
+unexpected.system.failure.errmsg = Unexpected System Failure. Please check logs. 
+
+temporary.system.failure.errcode = {0}1003{1}
+temporary.system.failure.errmsg = Temporary System Failure. Please try again later. 
+
+generic.failure.errcode = {0}1004{1}
+generic.failure.errmsg = Generic Exception.
+
+# Generic Data/Input/Format failures 4001 - 4599
+
+fault.invalid.json.errcode = {0}4001{1}
+fault.invalid.json.errmsg = Input JSON data is NOT valid. 
+
+fault.not.found.errcode = {0}4002{1}
+fault.not.found.errmsg = No suitable or matching data found.
+
+fault.invalid.input.data.errcode = {0}4003{1}
+fault.invalid.input.data.errmsg = Input data is NOT valid. 
+
+fault.invalid.search.criteria.errcode = {0}4004{1}
+fault.invalid.search.criteria.errmsg = Input data for Search Criteria is NOT valid. 
+
+fault.invalid.version.errcode = {0}4010{1} 
+fault.invalid.version.errmsg = The requested version is NOT supported.
+
+fault.deprecated.feature.errcode = {0}4011{1} 
+fault.deprecated.feature.errmsg = The requested feature is deprecated.
+
+# Coherence Cache Failures 4600 - 4800
+
+cache.unavailable.errcode = {0}4600{1}
+cache.unavailable.errmsg = Failed to locate redis cache repository.
+
+cache.initialization.failure.errcode = {0}4601{1}
+cache.initialization.failure.errmsg = Failed to initialize cache repository.
+
+cache.dcn.registration.failure.errcode = {0}4602{1}
+cache.dcn.registration.failure.errmsg = Failed to register for Database Change notification on Coherence cache.
+
+cache.read.failure.errcode = {0}4611{1}
+cache.read.failure.errmsg = Failed to read from cache repository.
+
+cache.read.miss.errcode = {0}4612{1}
+cache.read.miss.errmsg = Failed to locate data in cache repository.
+
+cache.write.failure.errcode = {0}4631{1}
+cache.write.failure.errmsg = Failed to write to cache repository.
+
+cache.refresh.failure.errcode = {0}4613{1}
+cache.refresh.failure.errmsg = Failed to refresh redis cache from database.
+
+
+# DB Errors 5000 - 5499
+
+db.connection.unavailable.errcode = {0}5000{1}
+db.connection.unavailable.errmsg = Failed to obtain database connection.
+
+db.select.failure.errcode = {0}5001{1}
+db.select.failure.errmsg = Data could not be retrieved successfully.
+
+db.insert.failure.errcode = {0}5002{1}
+db.insert.failure.errmsg = Data could not be inserted successfully.
+
+db.update.failure.errcode = {0}5003{1}
+db.update.failure.errmsg = Data could not be updated successfully.
+
+db.delete.failure.errcode = {0}5004{1}
+db.delete.failure.errmsg = Data could not be deleted successfully.
+
+db.connection.close.failure.errcode = {0}5005{1}
+db.connection.close.failure.errmsg = Failed to close Connection.
+
+db.dcn.registration.failure.errcode = {0}5006{1}
+db.dcn.registration.failure.errmsg = Failed to register for Database Change notification.
+
+db.dcn.unregistration.failure.errcode = {0}5007{1}
+db.dcn.unregistration.failure.errmsg = Failed to unregister for Database Change notification.
+
+# Queue Errors 5500 - 5999
+
+queue.connection.unavailable.errcode = {0}5500{1}
+queue.connection.unavailable.errmsg = Failed to obtain queue connection.
+
+queue.read.failure.errcode = {0}5501{1}
+queue.read.failure.errmsg = Unable to read from Queue.
+
+queue.write.failure.errcode = {0}5502{1}
+queue.write.failure.errmsg = Unable to write to Queue. 
+
+queue.quota.exceeded.errcode = {0}5511{1}
+queue.quota.exceeded.errmsg = Quota Exception while writing to Queue
+
+queue.message.type.invalid.errcode = {0}5701{1}
+queue.message.type.invalid.errmsg = An unexpected/invalid message type found in queue. 
+
+queue.message.content.invalid.errcode = {0}5702{1}
+queue.message.content.invalid.errmsg = Invalid/Incorrect message was received from Queue. 
+
+# External Service Failures 6000 - 7999
+
+# CLIP SERVICE ERRORS 6000 - 6099
+
+ext.clip.service.unavailable.errcode = {0}6001{1}
+ext.clip.service.unavailable.errmsg = Copient Clip Service Unavailable. Please Contact Safeway Support. 
+
+ext.clip.service.failure.errcode = {0}6002{1}
+ext.clip.service.failure.errmsg = Copient Clip Service System Error. Please Contact Safeway Support. 
+
+ext.clip.service.unknown.error.errcode = {0}6003{1}
+ext.clip.service.unknown.error.errmsg = Unknown Copient Clip Service Error. Please Contact Safeway Support. 
+
+ext.clip.service.invalid.response.errcode = {0}6004{1}
+ext.clip.service.invalid.response.errmsg = An Invalid Response was received from Copient Clip Service. 
+
+ext.clip.service.invalid.input.errcode = {0}6005{1}
+ext.clip.service.invalid.input.errmsg = The provided Clip Format is not supported by Copient Clip Service.
+
+ext.clip.service.incorrect.engine.errcode = {0}6006{1}
+ext.clip.service.incorrect.engine.errmsg = Incorrect engine type error from Copient Clip Service. Please Contact Safeway Support.
+
+# CLIP ACCOUNTING SERVICE ERRORS 6100 - 6149
+
+ext.clip.accounting.service.unavailable.errcode = {0}6101{1}
+ext.clip.accounting.service.unavailable.errmsg = Clip Accounting Service Unavailable. Please Contact Safeway Support. 
+
+ext.clip.accounting.service.failure.errcode = {0}6102{1}
+ext.clip.accounting.service.failure.errmsg = Clip Accounting Service System Error. Please Contact Safeway Support. 
+
+ext.clip.accounting.service.unknown.error.errcode = {0}6103{1}
+ext.clip.accounting.service.unknown.error.errmsg = Unknown Clip Accounting Service Error. Please Contact Safeway Support. 
+
+ext.clip.accounting.service.invalid.response.errcode = {0}6104{1}
+ext.clip.accounting.service.invalid.response.errmsg = An Invalid Response was received from Clip Accounting Service. 
+
+ext.clip.accounting.service.invalid.input.errcode = {0}6105{1}
+ext.clip.accounting.service.invalid.input.errmsg = The provided Clip Accounting Format is not supported by Clip Accounting Service.
+
+ext.clip.accounting.service.loadlimit.exceeded.errcode = {0}6106{1}
+ext.clip.accounting.service.loadlimit.exceeded.errmsg = Coupon Load Limit Reached.
+
+ext.clip.accounting.service.invalid.security.token.errcode = {0}6107{1}
+ext.clip.accounting.service.invalid.security.token.errmsg = Invalid Security Token passed to Accounting Service.
+
+ext.clip.accounting.service.invalid.coupon.errcode = {0}6108{1}
+ext.clip.accounting.service.invalid.coupon.errmsg = Invalid CouponID.
+
+ext.clip.accounting.service.clip.error.errcode = {0}6109{1}
+ext.clip.accounting.service.clip.error.errmsg = Accounting Failed for Input Clip.
+
+ext.clip.accounting.service.discardable.error.errcode = {0}6110{1}
+ext.clip.accounting.service.discardable.error.errmsg = Discardable Error encountered from Accounting Service.
+
+
+# REDEMPTION SERVICE ERRORS 6150 - 6199
+
+ext.redemption.service.unavailable.errcode = {0}6151{1}
+ext.redemption.service.unavailable.errmsg = Redemption Service Unavailable. Please Contact Safeway Support. 
+
+ext.redemption.service.failure.errcode = {0}6152{1}
+ext.redemption.service.failure.errmsg = Redemption Service System Error. Please Contact Safeway Support. 
+
+ext.redemption.service.unknown.error.errcode = {0}6153{1}
+ext.redemption.service.unknown.error.errmsg = Unknown Redemption Service Error. Please Contact Safeway Support. 
+
+ext.redemption.service.invalid.response.errcode = {0}6154{1}
+ext.redemption.service.invalid.response.errmsg = An Invalid Response was received from Redemption Service. 
+
+ext.redemption.service.invalid.input.errcode = {0}6155{1}
+ext.redemption.service.invalid.input.errmsg = The provided Redemption Format is not supported by Clip Accounting Service.
+
+ext.redemption.service.invalid.security.token.errcode = {0}6157{1}
+ext.redemption.service.invalid.security.token.errmsg = Invalid Security Token passed to Redemption Service.
+
+ext.redemption.service.invalid.coupon.errcode = {0}6158{1}
+ext.redemption.service.invalid.coupon.errmsg = Invalid CouponID.
+
+ext.redemption.service.discardable.error.errcode = {0}6159{1}
+ext.redemption.service.discardable.error.errmsg = Discardable Error encountered from Redemption Service.
+
+# ASYNC/CATALINA ERROR
+async.polling.service.timeout.error.errcode = {0}7122{1}
+async.polling.service.timeout.error.errcode.errmsg = Timeout Error while polling.
+
+
+async.polling.service.error.errcode = {0}7124{1}
+async.polling.service.error.errcode.errmsg = Error while polling.
+
+
+catalina.service.400.error.errcode ={0}7126{1}
+catalina.service.400.error.errcode.errmsg= Bad Request error while calling Catalina service.
+
+
+catalina.service.401.error.errcode = {0}7128{1}
+catalina.service.401.error.errcode.errmsg = Unauthorized error while calling Catalina service.
+
+
+catalina.service.404.error.errcode = {0}7130{1}
+catalina.service.404.error.errcode.errmsg= Not Found error while calling Catalina service.
+
+
+catalina.service.405.error.errcode= {0}7132{1}
+catalina.service.405.error.errcode.errmsg= Method Not Allowed error while calling Catalina service.
+
+
+catalina.service.500.error.errcode= {0}7134{1}
+catalina.service.500.error.errcode.errmsg= Server internal error while calling Catalina service.
+    
+    
+catalina.service.connection.timeout.error.errcode= Http timeout error while calling Catalina service.
+
+async.task.rejection.error.errcode= {0}7138{1}
+async.task.rejection.error.errcode.errmsg= Async task rejection.  
+
+# MY CARD ERROR 8150 - 8199
+error.retrieving.mycard.items.errcode= {0}8150{1}
+error.retrieving.mycard.items.errmsg= Error while retrieving Offer Allocations for UI MyCard items.
+
+# OSSO SERVICE ERROR 8200 - 8250
+osso.service.unavailable.errcode={0}8200{1}
+osso.service.unavailable.errmsg=Error while calling the OSSO service.
+
+#MY LIST ERRORS
+emls.error.invalid.customer.id.errcode = EMLSS02001E
+emls.error.invalid.customer.id.errmsg = Invalid Customer GUID in User Profile information.
+
+emls.error.invalid.household.id.errcode = EMLSS02003E
+emls.error.invalid.household.id.errmsg = Invalid Household Id in User Profile information.
+
+
+emls.error.invalid.clubcard.id.errcode = EMLSS02002E
+emls.error.invalid.clubcard.id.errmsg = Invalid Club Card in User Profile information.
+
+emls.error.invalid.postal.code.errcode = EMLSS02004E
+emls.error.invalid.postal.code.errmsg = Invalid Postal Code in User Profile information.
+
+emls.error.invalid.api.key.errcode = EMLSS02006E
+emls.error.invalid.api.key.errmsg = Invalid API Key in Request.
+
+emls.error.invalid.api.version.errcode = EMLSS02007E
+emls.error.invalid.api.version.errmsg = Invalid API Version in Request.
+
+emls.error.invalid.banner.errcode = EMLSS02009E
+emls.error.invalid.banner.errmsg = Invalid Banner in Request.
+
+emls.error.invalid.session.token.errcode = EMLSS02011E
+emls.error.invalid.session.token.errmsg = Invalid User Session Token in Request.
+
+emls.error.unable.to.process.errcode = EMLSS01001E
+emls.error.unable.to.process.errmsg = Unable to process request. Please contact Safeway support.
+
+emls.error.no.list.found.errcode = EMLSS01091E
+emls.error.no.list.found.errmsg = No suitable or matching data found.
+
+emls.error.invalid.email.errcode = EMLSS02012E
+emls.error.invalid.email.errmsg = Mandatory input (Email id and SLItemId) not provided.
+
+emls.error.invalid.emailId.errcode = EMLSS02013E
+emls.error.invalid.emailId.errmsg = Invalid Email id.
+
+emls.error.invalid.timestamp.errcode = EMLSS02014E
+emls.error.invalid.timestamp.errmsg = Time stamp is not ISO formatted.
+
+emls.error.invalid.clipid.errcode = EMLSS02015E
+emls.error.invalid.clipid.errmsg = Invalid Item Clip Id found in DB.
+
+
+# Loyalty Account Lookup ERRORS 7300 - 7399
+loyaltyaccounts.service.timeout.errcode=IASS07301E
+loyaltyaccounts.service.timeout.errmsg=Loyalty Account Service connection timed out.
+
+loyaltyaccounts.no.record.found.errcode=IASS07302E
+loyaltyaccounts.no.record.found.errmsg=No Registered accounts associated to the input club card number.
+
+loyaltyaccounts.service.notavailable.errcode=IASS07303E
+loyaltyaccounts.service.notavailable.errmsg=Loyalty Account Service not available.
+
+loyaltyaccounts.service.generic.errcode=IASS07300E
+loyaltyaccounts.service.generic.errmsg=Generic Exception.
+
+servicebus.generic.errcode=MSBT10000E
+servicebus.generic.errmsg=Service Bus Exception
+
+servicebus.undefined.subscription.errcode=MSBT20000E
+servicebus.undefined.subscription.errmsg=Use setSubscription method to set subscription
+
+servicebus.listener.not.set.errcode=MSBT30000E
+servicebus.listener.not.set.errmsg=Message Listener not set to consume messages.
+
+servicebus.failed.to.acknowledge.errcode=MSBT40000E
+servicebus.failed.to.acknowledge.errmsg=Failed to acknowledge the message
